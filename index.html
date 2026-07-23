@@ -3,210 +3,236 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Mehboob Ahmad — QA & Automation Engineer</title>
-  <meta name="description" content="QA & Automation Testing Engineer. Selenium, Java, TestNG, REST Assured, Postman."/>
+  <title id="site-title">Mehboob Ahmad — QA & Automation Engineer</title>
+  <meta name="description" id="site-desc" content="QA & Automation Testing Engineer."/>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
   <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
 
-  <!-- NAV -->
-  <nav id="navbar">
-    <div class="nav-inner">
-      <a href="#hero" class="nav-logo">
-        <span class="logo-bracket">&lt;</span>MA<span class="logo-bracket">/&gt;</span>
-      </a>
-      <ul class="nav-links" id="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#testimonials">Testimonials</a></li>
-        <li><a href="#contact" class="nav-cta">Hire Me</a></li>
-      </ul>
-      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-  </nav>
-
-  <!-- HERO -->
-  <section id="hero">
-    <div class="hero-bg-grid"></div>
-    <div class="hero-glow"></div>
-    <div class="hero-inner">
-      <div class="terminal-block">
-        <div class="terminal-bar">
-          <span class="t-dot red"></span>
-          <span class="t-dot yellow"></span>
-          <span class="t-dot green"></span>
-          <span class="t-label">test-suite.java</span>
-        </div>
-        <div class="terminal-body">
-          <div class="t-line"><span class="t-dim">$</span> <span class="t-cmd">mvn test -Dsuite=regression</span></div>
-          <div class="t-line t-running"><span class="t-dim">→</span> Running test suite...</div>
-          <div class="t-line t-pass"><span class="t-check">✓</span> <span class="t-name-inline" id="hero-name-terminal">Mehboob Ahmad</span> — QA Engineer <span class="t-badge">READY TO HIRE</span></div>
-        </div>
-      </div>
-      <h1 class="hero-headline" id="hero-tagline">I find the bugs<br/><em>before your users do.</em></h1>
-      <p class="hero-sub" id="hero-sub">QA & Automation Testing Engineer · Selenium · Java · REST Assured · TestNG</p>
-      <div class="hero-actions">
-        <a href="#projects" class="btn btn-primary">See My Work</a>
-        <a href="#contact" class="btn btn-ghost">Let's Talk</a>
-      </div>
-    </div>
-    <div class="hero-stats" id="hero-stats"></div>
-    <a href="#about" class="scroll-down" aria-label="Scroll down">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12l7 7 7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+<!-- NAV -->
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="#hero" class="nav-logo" id="nav-logo">
+      <span class="logo-bracket">&lt;</span>MA<span class="logo-bracket">/&gt;</span>
     </a>
-  </section>
+    <ul class="nav-links" id="nav-links">
+      <li data-section="about"><a href="#about">About</a></li>
+      <li data-section="skills"><a href="#skills">Skills</a></li>
+      <li data-section="services"><a href="#services">Services</a></li>
+      <li data-section="projects"><a href="#projects">Projects</a></li>
+      <li data-section="testimonials"><a href="#testimonials">Testimonials</a></li>
+      <li data-section="contact"><a href="#contact" class="nav-cta">Hire Me</a></li>
+    </ul>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
 
-  <!-- ABOUT -->
-  <section id="about" class="section">
-    <div class="container">
-      <div class="about-grid">
-        <div class="about-visual">
-          <div class="about-photo-ring">
-            <div class="about-photo" id="about-photo"><span id="about-initials">MA</span></div>
-          </div>
-          <div class="about-badge-float">
-            <span class="pulse-dot"></span> Available for Work
-          </div>
-        </div>
-        <div class="about-content">
-          <p class="eyebrow">About Me</p>
-          <h2 class="section-heading" id="about-name">Mehboob Ahmad</h2>
-          <p class="about-bio" id="about-bio">Loading...</p>
-          <div class="about-links" id="about-links">
-            <a id="about-email" href="#" class="chip">✉ Email</a>
-            <a id="about-linkedin" href="#" class="chip" target="_blank">in LinkedIn</a>
-            <a id="about-github" href="#" class="chip" target="_blank">⌥ GitHub</a>
-          </div>
-        </div>
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-bg-grid"></div>
+  <div class="hero-glow"></div>
+  <div class="hero-inner">
+    <div class="terminal-block">
+      <div class="terminal-bar">
+        <span class="t-dot red"></span><span class="t-dot yellow"></span><span class="t-dot green"></span>
+        <span class="t-label">test-suite.java</span>
+      </div>
+      <div class="terminal-body">
+        <div class="t-line"><span class="t-dim">$</span> <span class="t-cmd">mvn test -Dsuite=regression</span></div>
+        <div class="t-line t-running"><span class="t-dim">→</span> Running test suite...</div>
+        <div class="t-line t-pass"><span class="t-check">✓</span> <span id="hero-name-terminal" class="t-name-inline">Mehboob Ahmad</span> — QA Engineer <span class="t-badge">READY TO HIRE</span></div>
       </div>
     </div>
-  </section>
-
-  <!-- SKILLS -->
-  <section id="skills" class="section section-tinted">
-    <div class="container">
-      <p class="eyebrow center">Arsenal</p>
-      <h2 class="section-heading center">Skills & Tools</h2>
-      <div class="skills-grid" id="skills-grid"></div>
+    <h1 class="hero-headline" id="hero-tagline">I find the bugs<br/><em>before your users do.</em></h1>
+    <p class="hero-sub" id="hero-sub">QA & Automation Testing Engineer · Selenium · Java · REST Assured · TestNG</p>
+    <div class="hero-actions">
+      <a href="#projects" class="btn btn-primary">See My Work</a>
+      <a href="#contact" class="btn btn-ghost">Let's Talk</a>
     </div>
-  </section>
-
-  <!-- PROJECTS -->
-  <section id="projects" class="section">
-    <div class="container">
-      <p class="eyebrow center">Selected Work</p>
-      <h2 class="section-heading center">Projects</h2>
-      <div class="projects-grid" id="projects-grid"></div>
-    </div>
-  </section>
-
-  <!-- WHY HIRE ME -->
-  <section class="section section-dark-cta">
-    <div class="container">
-      <div class="why-grid">
-        <div class="why-text">
-          <p class="eyebrow light">Why Work With Me</p>
-          <h2 class="section-heading light">Ship software<br/>with confidence.</h2>
-          <p class="why-sub">Every missed bug is a missed opportunity to impress your users. I make sure your product works — exactly as intended, every time.</p>
-          <a href="#contact" class="btn btn-primary">Start a Project</a>
-        </div>
-        <div class="why-cards">
-          <div class="why-card">
-            <div class="why-icon">🔍</div>
-            <div class="why-card-title">Detail-Obsessed</div>
-            <p>I catch what others miss — edge cases, race conditions, API quirks.</p>
-          </div>
-          <div class="why-card">
-            <div class="why-icon">⚡</div>
-            <div class="why-card-title">Fast Turnaround</div>
-            <p>Automation means faster feedback loops and no waiting on manual runs.</p>
-          </div>
-          <div class="why-card">
-            <div class="why-icon">💬</div>
-            <div class="why-card-title">Clear Communication</div>
-            <p>Bug reports your team can actually act on — no jargon, just clarity.</p>
-          </div>
-          <div class="why-card">
-            <div class="why-icon">📈</div>
-            <div class="why-card-title">Measurable Results</div>
-            <p>70% faster regression cycles. 40% better defect detection. Real numbers.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- TESTIMONIALS -->
-  <section id="testimonials" class="section section-tinted">
-    <div class="container">
-      <p class="eyebrow center">Kind Words</p>
-      <h2 class="section-heading center">Testimonials</h2>
-      <div class="testimonials-grid" id="testimonials-grid"></div>
-    </div>
-  </section>
-
-  <!-- CONTACT -->
-  <section id="contact" class="section">
-    <div class="container container-narrow">
-      <p class="eyebrow center">Get In Touch</p>
-      <h2 class="section-heading center">Ready to work together?</h2>
-      <p class="contact-sub">Whether you need a QA freelancer, a test automation framework, or someone to own your entire quality process — I'm one message away.</p>
-
-      <form id="contact-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
-        <input type="hidden" name="form-name" value="contact"/>
-        <p style="display:none;"><input name="bot-field"/></p>
-        <div class="form-row">
-          <div class="form-group">
-            <label for="f-name">Your Name</label>
-            <input type="text" id="f-name" name="name" placeholder="John Smith" required/>
-          </div>
-          <div class="form-group">
-            <label for="f-email">Your Email</label>
-            <input type="email" id="f-email" name="email" placeholder="john@example.com" required/>
-          </div>
-        </div>
-        <div class="form-group">
-          <label for="f-subject">Subject</label>
-          <input type="text" id="f-subject" name="subject" placeholder="e.g. Freelance QA project, Full-time role..."/>
-        </div>
-        <div class="form-group">
-          <label for="f-message">Message</label>
-          <textarea id="f-message" name="message" rows="5" placeholder="Tell me about your project or testing needs..." required></textarea>
-        </div>
-        <button type="submit" class="btn btn-primary full" id="submit-btn">Send Message</button>
-        <div class="form-feedback" id="form-feedback"></div>
-      </form>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="container footer-inner">
-      <p class="footer-copy" id="footer-copy">© 2025 Mehboob Ahmad</p>
-      <div class="footer-links">
-        <a id="footer-linkedin" href="#" target="_blank">LinkedIn</a>
-        <a id="footer-github" href="#" target="_blank">GitHub</a>
-        <a href="admin.html" class="footer-admin">Admin</a>
-      </div>
-    </div>
-  </footer>
-
-  <!-- WHATSAPP BUBBLE -->
-  <a id="whatsapp-btn" href="#" target="_blank" class="whatsapp-bubble" aria-label="Chat on WhatsApp">
-    <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <circle cx="16" cy="16" r="16" fill="#25D366"/>
-      <path d="M22.5 9.5A8.96 8.96 0 0 0 16 7C11.03 7 7 11.03 7 16c0 1.59.42 3.14 1.2 4.5L7 25l4.63-1.21A9 9 0 0 0 16 25c4.97 0 9-4.03 9-9a8.96 8.96 0 0 0-2.5-6.5Z" fill="white" fill-opacity=".15"/>
-      <path d="M22.46 20.18c-.3-.15-1.77-.87-2.04-.97-.28-.1-.48-.15-.68.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.48-1.76-1.66-2.06-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.68-1.63-.93-2.23-.24-.58-.49-.5-.68-.51-.17-.01-.37-.01-.57-.01s-.52.07-.8.37c-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.87 1.22 3.07.15.2 2.1 3.2 5.08 4.49.71.31 1.27.49 1.7.63.71.23 1.36.2 1.87.12.57-.09 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35Z" fill="white"/>
-    </svg>
-    <span class="wa-tooltip">Chat on WhatsApp</span>
+  </div>
+  <div class="hero-stats" id="hero-stats"></div>
+  <a href="#about" class="scroll-down" aria-label="Scroll down">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12l7 7 7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
   </a>
+</section>
 
-  <script src="app.js"></script>
+<!-- ABOUT -->
+<section id="about" class="section">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-visual">
+        <div class="about-photo-ring">
+          <div class="about-photo" id="about-photo"><span id="about-initials">MA</span></div>
+        </div>
+        <div class="about-badge-float"><span class="pulse-dot"></span> Available for Work</div>
+      </div>
+      <div class="about-content">
+        <p class="eyebrow">About Me</p>
+        <h2 class="section-heading" id="about-name">Mehboob Ahmad</h2>
+        <div class="about-bio" id="about-bio">Loading...</div>
+        <div class="about-links">
+          <a id="about-email" href="#" class="chip">✉ Email</a>
+          <a id="about-linkedin" href="#" class="chip" target="_blank">in LinkedIn</a>
+          <a id="about-github" href="#" class="chip" target="_blank">⌥ GitHub</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="section section-tinted">
+  <div class="container">
+    <p class="eyebrow center">Arsenal</p>
+    <h2 class="section-heading center">Skills &amp; Tools</h2>
+    <div class="skills-grid" id="skills-grid"></div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="section section-dark-cta">
+  <div class="container">
+    <p class="eyebrow center light">What I Offer</p>
+    <h2 class="section-heading center light">Services</h2>
+    <div class="services-grid" id="services-grid"></div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="section section-tinted">
+  <div class="container">
+    <p class="eyebrow center">Selected Work</p>
+    <h2 class="section-heading center">Projects</h2>
+    <div class="projects-grid" id="projects-grid"></div>
+  </div>
+</section>
+
+<!-- WHY HIRE ME -->
+<section class="section why-section">
+  <div class="container">
+    <div class="why-grid">
+      <div class="why-text">
+        <p class="eyebrow">Why Work With Me</p>
+        <h2 class="section-heading">Ship software<br/>with confidence.</h2>
+        <p class="why-sub">Every missed bug is a missed opportunity to impress your users. I make sure your product works — exactly as intended, every time.</p>
+        <a href="#contact" class="btn btn-primary">Start a Project</a>
+      </div>
+      <div class="why-cards">
+        <div class="why-card"><div class="why-icon">🔍</div><div class="why-card-title">Detail-Obsessed</div><p>I catch what others miss — edge cases, race conditions, API quirks.</p></div>
+        <div class="why-card"><div class="why-icon">⚡</div><div class="why-card-title">Fast Turnaround</div><p>Automation means faster feedback loops and no waiting on manual runs.</p></div>
+        <div class="why-card"><div class="why-icon">💬</div><div class="why-card-title">Clear Communication</div><p>Bug reports your team can actually act on — no jargon, just clarity.</p></div>
+        <div class="why-card"><div class="why-icon">📈</div><div class="why-card-title">Measurable Results</div><p>70% faster regression cycles. 40% better defect detection. Real numbers.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials" class="section section-tinted">
+  <div class="container">
+    <p class="eyebrow center">Kind Words</p>
+    <h2 class="section-heading center">Testimonials</h2>
+    <div class="testimonials-grid" id="testimonials-grid"></div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section">
+  <div class="container container-narrow">
+    <p class="eyebrow center">Get In Touch</p>
+    <h2 class="section-heading center">Ready to work together?</h2>
+    <p class="contact-sub">Whether you need a QA freelancer, a test automation framework, or someone to own your entire quality process — I'm one message away.</p>
+
+    <div class="contact-options">
+      <div class="contact-form-wrap">
+        <form id="contact-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="f-name">Your Name</label>
+              <input type="text" id="f-name" name="from_name" placeholder="John Smith" required/>
+            </div>
+            <div class="form-group">
+              <label for="f-email">Your Email</label>
+              <input type="email" id="f-email" name="from_email" placeholder="john@example.com" required/>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="f-subject">Subject</label>
+            <input type="text" id="f-subject" name="subject" placeholder="e.g. Freelance QA project, Full-time role..."/>
+          </div>
+          <div class="form-group">
+            <label for="f-message">Message</label>
+            <textarea id="f-message" name="message" rows="5" placeholder="Tell me about your project or testing needs..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary full" id="submit-btn">Send Message</button>
+          <div class="form-feedback" id="form-feedback"></div>
+        </form>
+      </div>
+
+      <div class="contact-or"><span>or</span></div>
+
+      <div class="contact-wa-wrap">
+        <a id="contact-wa-btn" href="#" target="_blank" class="contact-wa-big">
+          <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" width="36" height="36">
+            <circle cx="16" cy="16" r="16" fill="#25D366"/>
+            <path d="M22.46 20.18c-.3-.15-1.77-.87-2.04-.97-.28-.1-.48-.15-.68.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.48-1.76-1.66-2.06-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.68-1.63-.93-2.23-.24-.58-.49-.5-.68-.51-.17-.01-.37-.01-.57-.01s-.52.07-.8.37c-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.87 1.22 3.07.15.2 2.1 3.2 5.08 4.49.71.31 1.27.49 1.7.63.71.23 1.36.2 1.87.12.57-.09 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35Z" fill="white"/>
+          </svg>
+          <div>
+            <div class="wa-big-title">Chat on WhatsApp</div>
+            <div class="wa-big-sub">Usually replies within 1 hour</div>
+          </div>
+          <svg viewBox="0 0 20 20" fill="none" width="18" style="margin-left:auto;opacity:.5"><path d="M4 10h12M10 4l6 6-6 6" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container footer-inner">
+    <p class="footer-copy" id="footer-copy">© 2025 Mehboob Ahmad</p>
+    <div class="footer-links">
+      <a id="footer-linkedin" href="#" target="_blank">LinkedIn</a>
+      <a id="footer-github" href="#" target="_blank">GitHub</a>
+      <a href="admin.html" class="footer-admin">Admin</a>
+    </div>
+  </div>
+</footer>
+
+<!-- WHATSAPP BUBBLE -->
+<a id="whatsapp-btn" href="#" target="_blank" class="whatsapp-bubble" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="16" cy="16" r="16" fill="#25D366"/>
+    <path d="M22.46 20.18c-.3-.15-1.77-.87-2.04-.97-.28-.1-.48-.15-.68.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.48-1.76-1.66-2.06-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.68-1.63-.93-2.23-.24-.58-.49-.5-.68-.51-.17-.01-.37-.01-.57-.01s-.52.07-.8.37c-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.87 1.22 3.07.15.2 2.1 3.2 5.08 4.49.71.31 1.27.49 1.7.63.71.23 1.36.2 1.87.12.57-.09 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35Z" fill="white"/>
+  </svg>
+  <span class="wa-tooltip">Chat on WhatsApp</span>
+</a>
+
+<!-- PROJECT MODAL -->
+<div class="modal-overlay" id="modal-overlay" onclick="closeModal()">
+  <div class="modal-box" id="modal-box" onclick="event.stopPropagation()">
+    <button class="modal-close" onclick="closeModal()" aria-label="Close">
+      <svg viewBox="0 0 20 20" fill="none" width="20"><path d="M5 5l10 10M15 5L5 15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+    </button>
+    <div class="modal-image-wrap" id="modal-image-wrap"></div>
+    <div class="modal-content">
+      <div class="modal-number" id="modal-number">PROJECT_01</div>
+      <h2 class="modal-title" id="modal-title"></h2>
+      <div class="modal-tech" id="modal-tech"></div>
+      <div class="modal-desc" id="modal-desc"></div>
+      <div class="modal-results" id="modal-results"></div>
+      <div class="modal-links" id="modal-links"></div>
+    </div>
+  </div>
+</div>
+
+<script src="app.js"></script>
 </body>
 </html>
